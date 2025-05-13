@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.special-offers, .new {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px; 
+  /* bo góc */
+  width: 48%;
+}
+
+.special-offers .label {
+  background-color: #f07705; 
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.new .label {
+  background-color: #04f510; 
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+
+.content1, .content2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.Chilled-products, .Bio-products, .Drinks, .Groceries, .Non-food {
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  margin: 0 0px;
+  font-size: 1.2em;
+}
+
+
+.Chilled-products { 
+    background-color: #2c71f0; } 
+
+.Bio-products { 
+    background-color: #9fe416; } 
+
+.Drinks { 
+    background-color: #ec0936; } 
+
+.Groceries {
+     background-color: #ffd700; } 
+
+.Non-food { 
+    background-color: #d68e07; } 
+
+
+.footer {
+  background-color: #000;
+  color: #f0f8ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header, .content1, .content2, .footer {
+    flex-direction: column;
+  }
+   .special-offers, .new, .Chilled-products, .Bio-products, .Drinks, .Groceries, .Non-food {
+    width: 100%;
+    margin: 5px 0;
+  }
+ 
+}
