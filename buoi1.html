@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>buổi 1</title>
+  </head>
+
+  <body>
+    <h1>Hello</h1>
+    <!--thẻ h1 dùng cho tiêu đề -->
+
+    <p>test</p>
+    <!--thẻ p dùng để viết đoạn văn -->
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <!-- thẻ ul(unodered list) tạo 1 danh sách ko sắp xếp  -->
+
+    <ol>
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ol>
+    <!-- thẻ ol(odered list) tạo 1 danh sách có sắp xếp -->
+
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_logo.png"
+      alt="YouTube"
+    />
+    <!-- thẻ img dùng để thêm hình ảnh -->
+
+    <a href="https://www.google.com">Truy cập Google</a>
+
+    <a href="https://www.youtube.com" target="_blank"
+      >Mở youtube trong tab mới</a
+    >
+    <!-- thẻ a dùng để tạo liên kết đến 1 trang web -->
+
+    <form action="submit.html" method="post">
+      <label for="name">Tên:</label>
+      <input type="text" id="name" name="name" />
+      <input type="submit" value="Gửi" />
+    </form>
+
+    <table border="1">
+      <!-- thẻ table dùng để tạo bảng, border là viền của bảng -->
+
+      <caption>
+        Bảng điểm học sinh
+      </caption>
+      <!-- thẻ caption dùng để tạo tiêu đề cho bảng -->
+
+      <thead>
+        <!-- thẻ thead: phần đầu bảng(tiêu đề,in đậm) -->
+        <tr>
+          <!-- thẻ tr(Table Row) dùng để xác định 1 hàng trong bảng -->
+        </tr>
+        <tr>
+          <th>Tên</th>
+          <!-- thẻ th(Table Header) : ô tiêu đề (in đậm) -->
+          <th>Điểm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- thẻ tbody: phần nội dung của bảng(chứa dữ liệu)-->
+        <tr>
+          <td>Hoàng</td>
+          <!-- thẻ td(Table Data) : ô chứa dữ liệu -->
+          <td>9.5</td>
+        </tr>
+        <tr>
+          <td>Linh</td>
+          <td>8.0</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <!-- thẻ tfoot: phần cuối bảng(thường là tổng kết) -->
+        <tr>
+          <td>Tổng</td>
+          <td>17.5</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <table border="1">
+      <colgroup>
+        <col span="2" style="background-color: lightgray" />
+        <col style="background-color: lightblue" />
+      </colgroup>
+      <tr>
+        <th>Cột 1</th>
+        <th>Cột 2</th>
+        <th>Cột 3</th>
+      </tr>
+      <tr>
+        <td>Dữ liệu 1</td>
+        <td>Dữ liệu 2</td>
+        <td>Dữ liệu 3</td>
+      </tr>
+    </table>
+  </body>
+</html>
