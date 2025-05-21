@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bt_es6.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>  
+        <tr>
+            <td class="text red-text">Tab 1</td>
+            <td class="text">Tab 2</td>
+            <td class="text">Tab 3</td>
+            <td class="text">Tab 4</td>
+            <td class="text">Tab 5</td>
+            <td class="text">Tab 6</td>
+        </tr>
+    </table>
+
+    <p class="content">Tab 1 content</p>
+
+    <button id="changeColor">Next</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => { // thêm một sự kiện để lắng nghe. Ở đây, sự kiện là "DOMContentLoaded", nghĩa là "khi trang web đã tải xong"
+            let currentIndex = 0;
+            const tabs = document.querySelectorAll(".text");  //Lấy tất cả các phần tử HTML có class text
+            const content = document.querySelector(".content"); //Lấy phần tử đầu tiên có class content
+            const button = document.getElementById("changeColor"); //Lấy phần tử có id="changeColor" (là nút Next)
+
+            button.addEventListener("click", () => { // Sự kiện để lắng nghe là click
+                if (currentIndex < tabs.length - 1) {
+                    tabs[currentIndex].classList.remove("red-text"); // Xóa màu đỏ ở tab hiện tại
+                    currentIndex++; // Di chuyển sang tab tiếp theo
+                    tabs[currentIndex].classList.add("red-text"); // Đổi màu đỏ cho tab mới
+                    content.textContent = `Tab ${currentIndex + 1} content`; // Cập nhật nội dung tab
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+<!--    classList là một thuộc tính của đối tượng Element trong DOM, không phải hàm, dùng để thao tác với class CSS.
+        Nó có các phương thức như add, remove, toggle, contains, replace, rất tiện lợi và an toàn.
+        Nếu bạn cần làm việc với class mà không dùng classList, bạn có thể dùng className, nhưng classList là cách hiện đại và được khuyến nghị. -->
