@@ -1,0 +1,14 @@
+.red-text {
+            color: red;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            margin: 20px;
+        }

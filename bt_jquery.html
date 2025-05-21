@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bt_jquery.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <table> 
+        <tr>
+            <td class="text red-text">Tab 1</td>
+            <td class="text">Tab 2</td>
+            <td class="text">Tab 3</td>
+            <td class="text">Tab 4</td>
+            <td class="text">Tab 5</td>
+            <td class="text">Tab 6</td>
+        </tr>
+    </table>
+    <p class="content">Tab 1 content</p>
+    <button id="changeColor">Next</button>
+    <script>
+        $(document).ready(function() {
+            let currentIndex = 0; // Tab hiện tại
+
+            $("#changeColor").click(function() { // Khi bấm nút các code bên trong ngoặc sẽ chạy
+                let tabs = $(".text"); // Lấy tất cả tab
+                
+                if (currentIndex < tabs.length - 1) { // Kiểm tra nếu chưa đến tab cuối
+                    $(tabs[currentIndex]).removeClass("red-text"); // Xóa màu đỏ ở tab hiện tại
+                    currentIndex++; // Di chuyển sang tab tiếp theo
+                    $(tabs[currentIndex]).addClass("red-text"); // Đổi màu đỏ cho tab mới
+
+                    let tabIndex = currentIndex + 1;
+                    $(".content").text("Tab " + tabIndex + " content"); // Hiển thị nội dung tab hiện tại
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
