@@ -37,26 +37,30 @@ li {
     color: black;
 }
 .image {
-   
+    width: 100%;
+    height: auto;
+
 }
 .row {
     display: flex;
     justify-content: space-between;
-    padding: 10px 2px;
+    padding: 10px 20px;
 }
 .footer {
     background-color: rgb(24, 116, 236);
     height: 50px;
 }
-/* Tablet */
 @media (max-width: 767px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cột , mỗi cột chiếm 1 nửa chiều rộng*/
-        }
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px
     }
-/* Mobile */
+}
+
 @media (max-width: 479px) {
-    .container {
-        grid-template-columns: 1fr; /*1 cột*/
-        }
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
     }
+}
