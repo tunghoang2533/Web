@@ -17,26 +17,26 @@
         }
     return true; // ko thì return true
 }
-    function giai8Hau(&$hau, $hang, &$loiGiai) {
+    function dat8Hau(&$hau, $hang, &$banCo) {
     if ($hang == N) {
-        $loiGiai = $hau;
+        $banCo = $hau;
         return true;
     }
     for ($cot = 0; $cot < N; $cot++) {
         if (ViTriAnToan($hau, $hang, $cot)) {
             $hau[$hang] = $cot;
-            if (giai8Hau($hau, $hang + 1, $loiGiai)) {
+            if (dat8Hau($hau, $hang + 1, $banCo)) {
                 return true;
             }
         }
     }
 
-    return false; // Không đặt được hậu hợp lệ ở hàng này
+    return false; // Không đặt được hậu ở hàng này
 }
     $hau = array_fill(0, N, -1);
-    $loiGiai = [];
+    $banCo = [];
 
-    giai8Hau($hau, 0, $loiGiai);
+    dat8Hau($hau, 0, $banCo);
 
 
         $dem = 1;
@@ -55,7 +55,7 @@
             } else {
                 $mauChu = 'black';
             }
-            if ($loiGiai[$hang] == $cot ){
+            if ($banCo[$hang] == $cot ){
                 $mauChu = 'red';
             }
 
