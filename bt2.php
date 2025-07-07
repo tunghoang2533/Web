@@ -33,7 +33,8 @@
 
     return false; // Không đặt được hậu ở hàng này
 }
-    $hau = array_fill(0, N, -1);
+    $hau = array_fill(0, N, -1); //Hàm dùng để tạo một mảng mới và điền các phần tử có cùng giá trị vào đó.
+                                                            //Các phần tử từ vị trí 0 đến N đều có giá trị khởi đầu là -1 vì ch đặt
     $banCo = [];
 
     dat8Hau($hau, 0, $banCo);
