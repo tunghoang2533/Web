@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    /*Tạo hiệu ứng chuyển động cho slide
+        - transform (dùng để di chuyển slide)
+        - thời gian chuyển đổi là 0.5 giây
+        - kiểu chuyển đổi là ease . */
+}
+
+.sl {
+    min-width: 100%;
+}
+
+.sl img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.previous, .next {
+    position: absolute; /*Đặt vị trí tuyệt đối cho nút trước và sau*/
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer; /*Con trỏ chuột hiển thị bàn tay khi di chuột qua nút*/
+    font-size: 18px;
+}
+
+.previous {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
